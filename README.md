@@ -9,8 +9,7 @@ Design a system that allows creating call campaigns with configurable retry beha
 1. Campaign Protocol Definition
 
    - Design approach and data model
-   - Set start time and intervals between calls (3 attempts, 10 seconds delay)
-   - Define retry behavior (attempts and delays)
+   - Set start time, retry attempts, and intervals between calls (3 attempts, 10 seconds delay)
    - Define a simple interface / protocol for managing these settings
 
 2. Job Execution System
@@ -49,6 +48,8 @@ Design a system that allows creating call campaigns with configurable retry beha
 
 ## Design and Debrief Discussion
 
+- What is your ideal infrastructure for this system (both low scale and high scale)?
 - How do we scale this to 100m calls per month?
 - What edge cases do you forsee running this system at scale? How do we prevent those?
-- What is your ideal testing framework?
+- What is your ideal testing framework for this system at scale?
+- What controls and design considerations would you have for a multi-tenant approach?
