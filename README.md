@@ -53,3 +53,10 @@ Design a system that allows creating call campaigns with configurable retry beha
 - What edge cases do you forsee running this system at scale? How do we prevent those?
 - What is your ideal testing framework for this system at scale?
 - What controls and design considerations would you have for a multi-tenant approach?
+
+## Evaluation Criteria (what we actually care about)
+
+- Speed to an MVP version. How quickly can you arrive at a working version that passes the three tests?
+- Simplifying complexity. How well can you simplify the system to make it easier to implement and maintain?
+- Communication of tradeoffs. When you are prioritizing speed / simplicity, what are you giving up
+- Understanding how to scale from 1->100. Can you identify the weakest links of your code and the adjustments that would be needed to scale?
