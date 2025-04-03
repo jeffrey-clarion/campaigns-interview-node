@@ -31,24 +31,21 @@ Design a system that allows creating call campaigns with configurable retry beha
 - The data model must represent the steps and the retry behavior.
 - Execute the campaign and verify that the steps are properly executed
 
-[Test 3]
-
-- Schedule three concurrent campaigns to be run at the same time
-- Execute the campaigns in parallel and verify that the steps are properly executed
-
 ## Stretch Goals
 
 1. Concurrency Control
-
+   - Extend to run concurrent calls. Demonstrate that multiple steps (e.g., live calls) can be run concurrently
    - Enforce a maximum number of concurrent steps (e.g., live calls) being executed at any given time
-   - Priority handling for more important jobs
-   - Tenant-specific concurrency limits
 
-2. Implement (or mock out) your ideal testing framework for this system
+2. Priority Based Scheduling
+   - Allow campaigns to have a priority level (e.g., high, medium, low). The job execution system shoudl proecess higher-priority campaigns first when multiple are due.
 
+    
 ## Design and Debrief Discussion
 
-- What is your ideal infrastructure for this system (both low scale and high scale)?
+- How would you implement priority handling for more important jobs at scale?
+- How would you implement tenant-specific concurrency limits?
+- How would you add the ability to cancel a campaign halfway through the steps? 
 - How do we scale this to 100m calls per month?
 - What edge cases do you forsee running this system at scale? How do we prevent those?
 - What is your ideal testing framework for this system at scale?
